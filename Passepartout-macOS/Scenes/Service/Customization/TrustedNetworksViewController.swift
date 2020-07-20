@@ -74,6 +74,7 @@ class TrustedNetworksViewController: NSViewController, ProfileCustomization {
         checkDisableConnection.title = L10n.Core.Service.Cells.TrustedPolicy.caption
         labelDisableConnectionDescription.stringValue = L10n.Core.Service.Sections.Trusted.footer
 
+        checkTrustEthernet.state = trustedNetworks.includesEthernet ? .on : .off
         checkDisableConnection.state = (trustedNetworks.policy == .disconnect) ? .on : .off
         model.delegate = self
         model.load(from: trustedNetworks)
@@ -106,7 +107,13 @@ class TrustedNetworksViewController: NSViewController, ProfileCustomization {
         }
         model.removeWifi(at: index)
     }
-    
+
+    @IBAction private func toggleTrustEthernet(_ sender: Any?) {
+        trustedNetworks.includesEthernet = (checkTrustEthernet.state == .on)
+
+        delegate?.profileCustomization(self, didUpdateTrustedNetworks: trustedNetworks)
+    }
+
     @IBAction private func toggleRetainConnection(_ sender: Any?) {
         let isOn = (checkDisableConnection.state == .on)
         let completionHandler: () -> Void = {

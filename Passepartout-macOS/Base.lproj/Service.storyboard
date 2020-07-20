@@ -1372,6 +1372,9 @@ DQ
                                             <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="toggleTrustEthernet:" target="pEk-HF-yal" id="3Kx-Ke-E0E"/>
+                                        </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Uot-vl-OsH">
                                         <rect key="frame" x="58" y="22" width="354" height="18"/>
