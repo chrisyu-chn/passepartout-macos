@@ -3,8 +3,7 @@
 
 import Foundation
 
-// swiftlint:disable superfluous_disable_command
-// swiftlint:disable file_length
+// swiftlint:disable superfluous_disable_command file_length implicit_return
 
 // MARK: - Strings
 
@@ -51,8 +50,8 @@ internal enum L10n {
       }
       internal enum Quit {
         /// Quit %@
-        internal static func title(_ p1: String) -> String {
-          return L10n.tr("App", "menu.quit.title", p1)
+        internal static func title(_ p1: Any) -> String {
+          return L10n.tr("App", "menu.quit.title", String(describing: p1))
         }
         internal enum Messages {
           /// The VPN, if enabled, will still run in the background. Do you want to quit?
@@ -88,8 +87,8 @@ internal enum L10n {
     }
     internal enum Organizer {
       /// %@
-      internal static func title(_ p1: String) -> String {
-        return L10n.tr("App", "organizer.title", p1)
+      internal static func title(_ p1: Any) -> String {
+        return L10n.tr("App", "organizer.title", String(describing: p1))
       }
       internal enum Alerts {
         internal enum OpenHostFile {
@@ -98,8 +97,8 @@ internal enum L10n {
         }
         internal enum RemoveProfile {
           /// Are you sure you want to delete profile %@?
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("App", "organizer.alerts.remove_profile.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("App", "organizer.alerts.remove_profile.message", String(describing: p1))
           }
           /// Remove profile
           internal static let title = L10n.tr("App", "organizer.alerts.remove_profile.title")
@@ -118,8 +117,8 @@ internal enum L10n {
     }
     internal enum Preferences {
       /// %@ Preferences
-      internal static func title(_ p1: String) -> String {
-        return L10n.tr("App", "preferences.title", p1)
+      internal static func title(_ p1: Any) -> String {
+        return L10n.tr("App", "preferences.title", String(describing: p1))
       }
       internal enum Sections {
         internal enum General {
@@ -224,8 +223,8 @@ internal enum L10n {
         }
         internal enum Signup {
           /// Register with %@
-          internal static func caption(_ p1: String) -> String {
-            return L10n.tr("Core", "account.cells.signup.caption", p1)
+          internal static func caption(_ p1: Any) -> String {
+            return L10n.tr("Core", "account.cells.signup.caption", String(describing: p1))
           }
         }
         internal enum Username {
@@ -240,48 +239,48 @@ internal enum L10n {
           internal enum Footer {
             internal enum Infrastructure {
               /// Use your %@ website credentials.
-              internal static func hideme(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.hideme", p1)
+              internal static func hideme(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.hideme", String(describing: p1))
               }
               /// Use your %@ website credentials. Your username is usually numeric (without spaces).
-              internal static func mullvad(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.mullvad", p1)
+              internal static func mullvad(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.mullvad", String(describing: p1))
               }
               /// Use your %@ website credentials. Your username is usually your e-mail.
-              internal static func nordvpn(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.nordvpn", p1)
+              internal static func nordvpn(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.nordvpn", String(describing: p1))
               }
               /// Use your %@ website credentials. Your username is usually numeric with a "p" prefix.
-              internal static func pia(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.pia", p1)
+              internal static func pia(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.pia", String(describing: p1))
               }
               /// Find your %@ credentials in the "Account > OpenVPN / IKEv2 Username" section of the website.
-              internal static func protonvpn(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.protonvpn", p1)
+              internal static func protonvpn(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.protonvpn", String(describing: p1))
               }
               /// Use your %@ service credentials, which may differ from website credentials.
-              internal static func torguard(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.torguard", p1)
+              internal static func torguard(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.torguard", String(describing: p1))
               }
               /// Use your %@ website credentials. Your username is usually your e-mail.
-              internal static func tunnelbear(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.tunnelbear", p1)
+              internal static func tunnelbear(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.tunnelbear", String(describing: p1))
               }
               /// Use your %@ website credentials. Your username is usually your e-mail.
-              internal static func vyprvpn(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.vyprvpn", p1)
+              internal static func vyprvpn(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.vyprvpn", String(describing: p1))
               }
               /// Find your %@ credentials in the OpenVPN Config Generator on the website.
-              internal static func windscribe(_ p1: String) -> String {
-                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.windscribe", p1)
+              internal static func windscribe(_ p1: Any) -> String {
+                return L10n.tr("Core", "account.sections.guidance.footer.infrastructure.windscribe", String(describing: p1))
               }
             }
           }
         }
         internal enum Registration {
           /// Go get an account on the %@ website.
-          internal static func footer(_ p1: String) -> String {
-            return L10n.tr("Core", "account.sections.registration.footer", p1)
+          internal static func footer(_ p1: Any) -> String {
+            return L10n.tr("Core", "account.sections.registration.footer", String(describing: p1))
           }
         }
       }
@@ -353,8 +352,8 @@ internal enum L10n {
           internal static let caption = L10n.tr("Core", "configuration.cells.renegotiation_seconds.caption")
           internal enum Value {
             /// after %@
-            internal static func after(_ p1: String) -> String {
-              return L10n.tr("Core", "configuration.cells.renegotiation_seconds.value.after", p1)
+            internal static func after(_ p1: Any) -> String {
+              return L10n.tr("Core", "configuration.cells.renegotiation_seconds.value.after", String(describing: p1))
             }
           }
         }
@@ -439,8 +438,8 @@ internal enum L10n {
         internal enum Purchase {
           internal enum Failure {
             /// Unable to perform the donation. %@
-            internal static func message(_ p1: String) -> String {
-              return L10n.tr("Core", "donation.alerts.purchase.failure.message", p1)
+            internal static func message(_ p1: Any) -> String {
+              return L10n.tr("Core", "donation.alerts.purchase.failure.message", String(describing: p1))
             }
           }
           internal enum Success {
@@ -588,8 +587,8 @@ internal enum L10n {
       internal enum Cells {
         internal enum About {
           /// About %@
-          internal static func caption(_ p1: String) -> String {
-            return L10n.tr("Core", "organizer.cells.about.caption", p1)
+          internal static func caption(_ p1: Any) -> String {
+            return L10n.tr("Core", "organizer.cells.about.caption", String(describing: p1))
           }
         }
         internal enum Donate {
@@ -672,32 +671,32 @@ internal enum L10n {
         }
         internal enum Malformed {
           /// The configuration file contains a malformed option (%@).
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("Core", "parsed_file.alerts.malformed.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("Core", "parsed_file.alerts.malformed.message", String(describing: p1))
           }
         }
         internal enum Missing {
           /// The configuration file lacks a required option (%@).
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("Core", "parsed_file.alerts.missing.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("Core", "parsed_file.alerts.missing.message", String(describing: p1))
           }
         }
         internal enum Parsing {
           /// Unable to parse the provided configuration file (%@).
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("Core", "parsed_file.alerts.parsing.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("Core", "parsed_file.alerts.parsing.message", String(describing: p1))
           }
         }
         internal enum PotentiallyUnsupported {
           /// The configuration file is correct but contains a potentially unsupported option (%@).\n\nConnectivity may break depending on server settings.
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("Core", "parsed_file.alerts.potentially_unsupported.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("Core", "parsed_file.alerts.potentially_unsupported.message", String(describing: p1))
           }
         }
         internal enum Unsupported {
           /// The configuration file contains an unsupported option (%@).
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("Core", "parsed_file.alerts.unsupported.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("Core", "parsed_file.alerts.unsupported.message", String(describing: p1))
           }
         }
       }
@@ -740,12 +739,12 @@ internal enum L10n {
         }
         internal enum Download {
           /// Failed to download configuration files. %@
-          internal static func failed(_ p1: String) -> String {
-            return L10n.tr("Core", "service.alerts.download.failed", p1)
+          internal static func failed(_ p1: Any) -> String {
+            return L10n.tr("Core", "service.alerts.download.failed", String(describing: p1))
           }
           /// %@ requires the download of additional configuration files.\n\nConfirm to start the download.
-          internal static func message(_ p1: String) -> String {
-            return L10n.tr("Core", "service.alerts.download.message", p1)
+          internal static func message(_ p1: Any) -> String {
+            return L10n.tr("Core", "service.alerts.download.message", String(describing: p1))
           }
           /// Download required
           internal static let title = L10n.tr("Core", "service.alerts.download.title")
@@ -868,8 +867,8 @@ internal enum L10n {
         }
         internal enum ProviderInfrastructure {
           /// Last updated on %@.
-          internal static func footer(_ p1: String) -> String {
-            return L10n.tr("Core", "service.sections.provider_infrastructure.footer", p1)
+          internal static func footer(_ p1: Any) -> String {
+            return L10n.tr("Core", "service.sections.provider_infrastructure.footer", String(describing: p1))
           }
         }
         internal enum Trusted {
@@ -1041,10 +1040,15 @@ internal enum L10n {
 
 extension L10n {
   private static func tr(_ table: String, _ key: String, _ args: CVarArg...) -> String {
-    // swiftlint:disable:next nslocalizedstring_key
-    let format = NSLocalizedString(key, tableName: table, bundle: Bundle(for: BundleToken.self), comment: "")
+    let format = BundleToken.bundle.localizedString(forKey: key, value: nil, table: table)
     return String(format: format, locale: Locale.current, arguments: args)
   }
 }
 
-private final class BundleToken {}
+// swiftlint:disable convenience_type
+private final class BundleToken {
+  static let bundle: Bundle = {
+    Bundle(for: BundleToken.self)
+  }()
+}
+// swiftlint:enable convenience_type

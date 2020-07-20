@@ -53,7 +53,7 @@ struct Theme {
 // FIXME: load from index JSON
 extension Infrastructure.Metadata {
     var logo: NSImage? {
-        guard let image = AssetImageTypeAlias(named: name) else {
+        guard let image = ImageAsset.Image(named: name) else {
             return Asset.Providers.placeholder.image
         }
         return image

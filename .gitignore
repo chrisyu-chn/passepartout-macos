@@ -17,3 +17,4 @@ templates/
 .env.secret*
 Preview.html
 Secret.xcconfig
+default.profraw
