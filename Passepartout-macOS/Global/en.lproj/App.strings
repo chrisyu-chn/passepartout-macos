@@ -53,6 +53,8 @@
 "preferences.sections.general.header" = "General";
 
 "trusted.columns.trust.title" = "Trust";
+"trusted.ethernet.title" = "Trust Ethernet connections";
+"trusted.ethernet.description" = "Check to trust any Ethernet (wired cable) connection.";
 
 "menu.active_profile.title.none" = "No active profile";
 "menu.active_profile.messages.missing_credentials" = "No account configured";

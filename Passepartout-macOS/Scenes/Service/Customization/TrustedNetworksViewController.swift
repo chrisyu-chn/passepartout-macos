@@ -43,6 +43,10 @@ class TrustedNetworksViewController: NSViewController, ProfileCustomization {
 
     @IBOutlet private weak var buttonRemove: NSButton!
     
+    @IBOutlet private weak var checkTrustEthernet: NSButton!
+    
+    @IBOutlet private weak var labelTrustEthernetDescription: NSTextField!
+
     @IBOutlet private weak var checkDisableConnection: NSButton!
     
     @IBOutlet private weak var labelDisableConnectionDescription: NSTextField!
@@ -65,6 +69,8 @@ class TrustedNetworksViewController: NSViewController, ProfileCustomization {
         labelTitle.stringValue = L10n.Core.Service.Sections.Trusted.header.asCaption
         buttonAdd.image = NSImage(named: NSImage.addTemplateName)
         buttonRemove.image = NSImage(named: NSImage.removeTemplateName)
+        checkTrustEthernet.title = L10n.App.Trusted.Ethernet.title
+        labelTrustEthernetDescription.stringValue = L10n.App.Trusted.Ethernet.description
         checkDisableConnection.title = L10n.Core.Service.Cells.TrustedPolicy.caption
         labelDisableConnectionDescription.stringValue = L10n.Core.Service.Sections.Trusted.footer
 

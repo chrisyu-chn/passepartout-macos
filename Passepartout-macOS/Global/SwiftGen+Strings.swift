@@ -156,6 +156,12 @@ internal enum L10n {
           internal static let title = L10n.tr("App", "trusted.columns.trust.title")
         }
       }
+      internal enum Ethernet {
+        /// Check to trust any Ethernet (wired cable) connection.
+        internal static let description = L10n.tr("App", "trusted.ethernet.description")
+        /// Trust Ethernet connections
+        internal static let title = L10n.tr("App", "trusted.ethernet.title")
+      }
     }
     internal enum Vpn {
       /// Off
