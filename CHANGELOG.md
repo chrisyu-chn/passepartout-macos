@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - Trust Ethernet connections.
+- Child Safe VPN provider.
 
 ## 1.0.0 beta 345 (2018-10-01)
 

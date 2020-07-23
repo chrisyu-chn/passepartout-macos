@@ -282,6 +282,7 @@ internal enum Asset {
     internal static let zw = ImageAsset(name: "zw")
   }
   internal enum Providers {
+    internal static let csv = ImageAsset(name: "csv")
     internal static let hideme = ImageAsset(name: "hideme")
     internal static let mullvad = ImageAsset(name: "mullvad")
     internal static let nordvpn = ImageAsset(name: "nordvpn")
