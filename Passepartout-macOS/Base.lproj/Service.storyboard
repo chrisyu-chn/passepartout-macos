@@ -712,7 +712,7 @@
         <!--Profile Customization Container View Controller-->
         <scene sceneID="NKs-zh-97d">
             <objects>
-                <viewController id="0UB-pb-AEz" customClass="ProfileCustomizationContainerViewController" customModule="Passepartout" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProfileCustomizationContainerViewController" id="0UB-pb-AEz" customClass="ProfileCustomizationContainerViewController" customModule="Passepartout" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ZzD-Rr-Ch6">
                         <rect key="frame" x="0.0" y="0.0" width="740" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -219,6 +219,14 @@ class StatusMenu: NSObject {
             i += 1
             itemsProfile.append(itemEndpoint)
 
+            // customize
+            let itemCustomize = NSMenuItem(title: L10n.App.Menu.ActiveProfile.Items.Customize.title, action: #selector(customizeProfile(_:)), keyEquivalent: "")
+            menu.insertItem(itemCustomize, at: i)
+            i += 1
+            itemCustomize.target = self
+            itemCustomize.indentationLevel = 1
+            itemsProfile.append(itemCustomize)
+
             let itemSep1: NSMenuItem = .separator()
             menu.insertItem(itemSep1, at: i)
             i += 1
@@ -328,6 +336,13 @@ class StatusMenu: NSObject {
 
         // update menu
         setActiveProfile(profile)
+    }
+    
+    @objc private func customizeProfile(_ sender: Any?) {
+        let organizer = WindowManager.shared.showOrganizer()
+        let profileCustomization = StoryboardScene.Service.profileCustomizationContainerViewController.instantiate()
+        profileCustomization.profile = service.activeProfile
+        organizer?.contentViewController?.presentAsModalWindow(profileCustomization)
     }
 
     @objc private func joinCommunity() {

@@ -31,6 +31,12 @@ internal enum L10n {
     }
     internal enum Menu {
       internal enum ActiveProfile {
+        internal enum Items {
+          internal enum Customize {
+            /// Customize...
+            internal static let title = L10n.tr("App", "menu.active_profile.items.customize.title")
+          }
+        }
         internal enum Messages {
           /// No account configured
           internal static let missingCredentials = L10n.tr("App", "menu.active_profile.messages.missing_credentials")

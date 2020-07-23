@@ -30,6 +30,8 @@ internal enum StoryboardScene {
     internal static let initialScene = InitialSceneType<ServiceViewController>(storyboard: Service.self)
 
     internal static let accountViewController = SceneType<AccountViewController>(storyboard: Service.self, identifier: "AccountViewController")
+
+    internal static let profileCustomizationContainerViewController = SceneType<ProfileCustomizationContainerViewController>(storyboard: Service.self, identifier: "ProfileCustomizationContainerViewController")
   }
 }
 // swiftlint:enable explicit_type_interface identifier_name line_length type_body_length type_name

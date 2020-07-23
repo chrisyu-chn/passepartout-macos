@@ -57,6 +57,7 @@
 "trusted.ethernet.description" = "Check to trust any Ethernet (wired cable) connection.";
 
 "menu.active_profile.title.none" = "No active profile";
+"menu.active_profile.items.customize.title" = "Customize...";
 "menu.active_profile.messages.missing_credentials" = "No account configured";
 "menu.organizer.title" = "Organizer";
 "menu.preferences.title" = "Preferences";
