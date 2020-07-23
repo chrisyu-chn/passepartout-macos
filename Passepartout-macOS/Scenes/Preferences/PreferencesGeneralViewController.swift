@@ -54,6 +54,6 @@ class PreferencesGeneralViewController: NSViewController {
 //            confirmVpnReconnection()
 //            return
 //        }
-        vpn.reinstallIfEnabled()
+        vpn.reinstall(completionHandler: nil)
     }
 }
